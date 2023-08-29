@@ -1,0 +1,16 @@
+
+<div>                                                           
+    <h1>Todo List</h1>                                          
+    <input [(ngModel)]="newTask" placeholder="Nueva Tarea">     <!-- Campo de entrada para escribir una nueva tarea, vinculado a 'newTask' usando ngModel -->
+    <button (click)="addTask()">Añadir</button>                 <!-- Botón para agregar una tarea, llama a la función 'addTask()' en el componente al hacer clic -->
+    
+    <input [(ngModel)]="borrar" placeholder="Borrar Tarea">     <!-- Campo de entrada para especificar la tarea a borrar, vinculado a 'borrar' usando ngModel -->
+    <button (click)="removeTask(borrar)">Borrar</button>        <!-- Botón para borrar la tarea especificada, llama a 'removeTask(borrar)' al hacer clic -->
+
+    <ol>                                                        <!-- Lista Ordenada para mostrar las tareas existentes -->
+        <li *ngFor="let task of tasks; let i = index">          <!-- Itera sobre cada tarea en la matriz 'tasks', 'let i = index' guarda el índice actual -->
+            {{task}}                                            <!-- Muestra el contenido de la tarea -->
+            <button (click)="removeTask(i)">Eliminar</button>   <!-- Botón para eliminar la tarea correspondiente, llama a 'removeTask(i)' al hacer clic -->
+        </li>
+    </ol>
+</div>
