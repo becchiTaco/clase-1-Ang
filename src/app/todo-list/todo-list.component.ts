@@ -6,8 +6,8 @@ import { Component } from '@angular/core';    // Importa la clase 'Component' de
   styleUrls: ['./todo-list.component.css']      // Rutas a los archivos de hojas de estilo
 })
 export class TodoListComponent {              // Definición de la clase del componente y otorga el acceso a otros archivos con export
-  tasks: string[] = [];                         // Matriz para almacenar las tareas
-  newTask: string = '';                         // Variable para almacenar la nueva tarea a agregar
+  tasks: string[] = [];                         // Matriz para almacenar las tareas, se iguala a un arreglo vacío
+  newTask: string = '';                         // Variable para almacenar la nueva tarea a agregar, se iguala a un string vacío.
   borrar: number | any;                         // Variable para almacenar el valor de la tarea a borrar.
 
   addTask() {                                 // Método para agregar una nueva tarea a la matriz 'tasks'
